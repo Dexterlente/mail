@@ -1,0 +1,15 @@
+textarea {
+    min-height: 400px;
+}
+
+.unread {
+    background-color: gray;
+}
+
+.read {
+    background-color: white;
+}
+
+.btn-primary {
+    margin-left: 10px;
+}
