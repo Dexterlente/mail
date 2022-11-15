@@ -76,8 +76,8 @@ function view_email(id) {
 			// console.log(JSON.stringify(mail));
 			// console.log(sessionStorage.getItem("mail"));
 
-			document.getElementById("email-contents").innerHTML =
-				sessionStorage.getItem("mail");
+			// document.getElementById("email-contents").innerHTML =
+			// 	sessionStorage.getItem("mail");
 
 			if (!email.read) {
 				fetch(`/emails/${email.id}`, {
