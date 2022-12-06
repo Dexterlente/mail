@@ -12,5 +12,5 @@ Developed in python django for the backend and vanilla javascript for the front 
  ##### All rendered in Javascript for faster loading times.
 ***
 #### models.py
-`User` - model which uses Django Abstractuser Extension
-`Email` - The model that has been serialize to be an API for the emailing System
+-`User` - model which uses Django Abstractuser Extension
+-`Email` - The model that has been serialize to be an API for the emailing System
