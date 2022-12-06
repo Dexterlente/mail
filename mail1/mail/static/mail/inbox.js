@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		.querySelector("#compose-form")
 		.addEventListener("submit", send_email);
 	// By default, load the inbox
+
+	if(sessionStorage.getItem("emailID") !== null) {
+        const itemId = sessionStorage.getItem("emailID");
+        view_email(itemId);
+    }
 	if (sessionStorage.getItem("mail") !== null) {
 		const item = sessionStorage.getItem("mail"); //hereeeeeeeeeeeeeeeeeeeeee
 		if (item === "compose") {
@@ -155,9 +160,16 @@ function load_mailbox(mailbox) {
       `;
 				makeMessage.className = newMessage.read ? "read" : "unread";
 
-				makeMessage.addEventListener("click", function () {
-					view_email(newMessage.id);
-				});
+				// makeMessage.addEventListener("click", function () {
+				// 	view_email(newMessage.id);
+				// });
+
+			const sessionView = () =>
+                sessionStorage.setItem("emailID", newMessage.id);
+            makeMessage.addEventListener("click", () => {
+                sessionView();
+                view_email(newMessage.id);
+            });
 				document.querySelector("#emails-view").append(makeMessage);
 			});
 		});
