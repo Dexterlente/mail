@@ -19,3 +19,4 @@ Developed in python django for the backend and vanilla javascript for the front 
  This system uses django framework
 ***
 #### Future Updates on this application will be made 
+.
